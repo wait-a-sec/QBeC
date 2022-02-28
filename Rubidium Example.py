@@ -23,8 +23,8 @@ ansatz = ansatz.construct("RealAmplitudes", reps= 4, num_qubits=3, entanglement=
 #Defining the backend 
 backend = Aer.get_backend('qasm_simulator')
 
-#Defining the optimizer
-opt = optimizer('SPSA', iterations=5000, ansatz.num_parameters)
+#Defining the optimizer with 5000 iterations
+opt = optimizer('SPSA', 5000, ansatz.num_parameters)
 
 #Different number of atoms are taken to check the results
 num_atoms = [100, 500, 1000, 5000]
